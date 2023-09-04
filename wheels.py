@@ -22,8 +22,8 @@ while gameRunning:
         print("You lose :(")
         gameRunning = False
         break
+    print("\n------ ROUND " + str(round) + "------")
     while turn == "Player":
-        print("\n------ ROUND " + str(round) + "------")
         player_attack_points = []    
         i = 0
         for i in range(6): #Total de ataque
@@ -33,7 +33,7 @@ while gameRunning:
         print([player_attack_points])
         retry = input("")
         if retry == "n":
-            print("Vida inimiga: " + str(cpu_nexus_health))
+            print("\nVida inimiga: " + str(cpu_nexus_health))
             cpu_nexus_health = cpu_nexus_health - sum(player_attack_points)
             turn = "CPU"
     while turn == "CPU":
