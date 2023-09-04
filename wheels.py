@@ -38,8 +38,9 @@ while gameRunning:
             turn = "CPU"
     while turn == "CPU":
         cpu_attack_points = []
-        random_value = random.randint(0, 3)
-        cpu_attack_points.append(random_value)
+        for i in range(6):
+            cpu_random_value = random.randint(1, 3)
+            cpu_attack_points.append(cpu_random_value)
         player_nexus_health = player_nexus_health - sum(cpu_attack_points)
         print("Você tomou " + str(sum(cpu_attack_points)) + " de dano. Vida atual: " + str(player_nexus_health))
         round += 1
