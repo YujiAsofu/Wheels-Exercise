@@ -9,9 +9,6 @@ gameRunning = True
 turn = "Player"
 round = 1
 
-print("Sua vida: " + str(player_nexus_health))
-print("Vida inimiga: " + str(cpu_nexus_health))
-
 while gameRunning:
     if cpu_nexus_health <= 0:
         print(cpu_nexus_health)
@@ -23,8 +20,10 @@ while gameRunning:
         gameRunning = False
         break
     print("\n------ ROUND " + str(round) + "------")
+    print(f"HP: {str(player_nexus_health):>8}")
+    print(f"Enemy HP: {str(cpu_nexus_health)}")
     while turn == "Player":
-        player_attack_points = []    
+        player_attack_points = []
         i = 0
         for i in range(6): #Total de ataque
             random_value = random.randint(0, 3)
